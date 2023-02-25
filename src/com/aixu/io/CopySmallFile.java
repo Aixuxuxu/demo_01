@@ -2,10 +2,7 @@ package com.aixu.io;
 
 import com.aixu.testError.FileException;
 
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * @author aixu
@@ -16,11 +13,13 @@ import java.io.IOException;
  */
 public class CopySmallFile {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         String input = "C:\\Users\\lenovo\\Desktop\\怀化学院专升本资料包\\怀化学院专升本资料包\\说明.docx";
         String output = "C:\\Users\\lenovo\\Desktop\\test.docx";
         copy(input,output);
+
+        
 
     }
 

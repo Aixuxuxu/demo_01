@@ -30,12 +30,14 @@ public class CopyFile  {
             byte[] bytes = new byte[1024 * 1024];
             int length; // 获取byte数组中读取的字节数
             long total = file.length(),sum = 0;
+
             // 2、循环往返
             while((length = inputStream.read(bytes)) != -1){    // 每次都读取byte中的字节数，当 read() 方法返回-1表示已经没有数据了
 
                 outputStream.write(bytes,0,length);     // 利用读取到的数据长度，往目标位置写入
                 sum+=length;
                 System.out.println("文件已拷贝"+ (sum * 100 / total) +"%" );
+
             }
 
         }catch(IOException e){
